@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>GameData Admin Login</title>
+<title>GSCG Admin Login</title>
 
 <!--  favicon -->
 <link rel="shortcut icon" href="/gscg-admin/favicon.ico" type="image/x-icon">
@@ -152,10 +152,10 @@ html, body {
 <body>
   <div class="gscg-login-page">
     <div class="gscg-login-header">
-      <img src="images/header.png">
+      <img style="height:56px; margin-top:12px;" src="images/gscg-logo-white.png">
       <div class="gscg-login-header-right">
         <img src="images/tudelft.png" />
-        <span style="font-size: 12px; padding-left: 20px; position:relative; top:-4px; color:black;">GameData v0.1</span>
+        <span style="font-size: 12px; padding-left: 20px; position:relative; top:-4px; color:black;">GSCG Admin v0.1</span>
       </div>
     </div>
   
