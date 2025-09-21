@@ -10,8 +10,6 @@
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
                 
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/.apt_generated"/>
-                
         <dependent-module archiveName="gscg-common-0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gscg-common/gscg-common">
                         
             <dependency-type>uses</dependency-type>
