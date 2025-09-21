@@ -17,12 +17,12 @@ public class SubMenubar
 {
     private static String subMenuBarStart = """
             <!-- SubMenubar -->
-            <div id="main-submenubar" class="gd-submenubar">
+            <div id="main-submenubar" class="gscg-submenubar">
                       """;
 
     /** SubMenubar item with: 1. active/blank, 2. true/false, 3. onclick menu, 4. fa-icon, 5. text. */
     private static String subMenuBarItem = """
-              <a href="#" class="gd-submenubar-menu-item %s" aria-current="%s"
+              <a href="#" class="gscg-submenubar-menu-item %s" aria-current="%s"
                   onclick="clickMenu('%s')">
                 <i class="fa-regular %s fa-fw"></i><span>%s</span>
               </a>
@@ -30,27 +30,27 @@ public class SubMenubar
 
     /** SubMenubar group item with: 1. text. */
     private static String subMenuBarGroup = """
-              <div class="gd-submenubar-menu-group">%s</div>
+              <div class="gscg-submenubar-menu-group">%s</div>
             """;
 
     /** SubMenubar filter with: 1. field-text. */
     private static String subMenuBarFilterEmpty = """
-              <div class="gd-submenubar-filter-text">
+              <div class="gscg-submenubar-filter-text">
                  %s
               </div>
-              <div class="gd-submenu-choice">
-                <div class="gd-submenu-choice-text">&nbsp;</div>
+              <div class="gscg-submenu-choice">
+                <div class="gscg-submenu-choice-text">&nbsp;</div>
               </div>
             """;
 
     /** SubMenubar filter with: 1. field-text, 2 = filter-text, 3=close action. */
     private static String subMenuBarFilter = """
-              <div class="gd-submenubar-filter-text">
+              <div class="gscg-submenubar-filter-text">
                  %s
               </div>
-              <div class="gd-submenu-choice">
-                <div class="gd-submenu-choice-text">%s</div>
-                <div class="gd-submenu-choice-close">
+              <div class="gscg-submenu-choice">
+                <div class="gscg-submenu-choice-text">%s</div>
+                <div class="gscg-submenu-choice-close">
                   <a href="#" onclick="clickMenu('%s')">
                     <i class="fas fa-xmark fa-fw"></i>
                   </a>
@@ -88,7 +88,7 @@ public class SubMenubar
     private static void showSubMenu(final StringBuilder s, final AdminData data, final String subMenuName, final String tabText)
     {
         if (subMenuName.equals(data.getSubMenuChoice(data.getMenuChoice())))
-            s.append(subMenuBarItem.formatted("gd-active", "true", "submenu-" + subMenuName, "fa-circle", tabText));
+            s.append(subMenuBarItem.formatted("gscg-active", "true", "submenu-" + subMenuName, "fa-circle", tabText));
         else
             s.append(subMenuBarItem.formatted("", "false", "submenu-" + subMenuName, "fa-circle", tabText));
     }

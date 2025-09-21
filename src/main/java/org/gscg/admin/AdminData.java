@@ -161,8 +161,6 @@ public class AdminData extends CommonData
 
     public boolean hasGameAccess(final Access access)
     {
-        if (isGameAdmin())
-            return true;
         for (Access ga : getGameAccess().values())
         {
             if (ga.ordinal() <= access.ordinal())

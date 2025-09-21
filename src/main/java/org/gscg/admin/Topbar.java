@@ -15,23 +15,23 @@ public class Topbar
 {
     private static String topbarStart = """
             <!-- Topbar -->
-            <div id="main-topbar" class="gd-topbar">
-              <div class="gd-topbar-logo">
-                <img src="images/header.png">
+            <div id="main-topbar" class="gscg-topbar">
+              <div class="gscg-topbar-logo">
+                <img src="images/header.png" style="height:56px; margin-top:12px;">
               </div>
-              <div class="gd-topbar-buttons-left">
+              <div class="gscg-topbar-buttons-left">
             """;
 
     private static String topbarButton = """
-                <div class="gd-button">
+                <div class="gscg-button">
                   <button type="button" class="btn btn-primary" onclick="clickMenu('%s')">%s</button>
                 </div>
             """;
 
     private static String topbarTitle = """
               </div>
-                <div class="gd-title"><h3>%s</h3></div>
-              <div class="gd-topbar-buttons-right">
+                <div class="gscg-title"><h3>%s</h3></div>
+              <div class="gscg-topbar-buttons-right">
             """;
 
     private static String topbarEnd = """

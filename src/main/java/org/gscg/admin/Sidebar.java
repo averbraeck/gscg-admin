@@ -15,17 +15,17 @@ public class Sidebar
     /** top of the sidebar. */
     private static String sidebarTop = """
             <!-- Sidebar -->
-            <div id="sidebarMenu" class="gd-sidebar">
+            <div id="sidebarMenu" class="gscg-sidebar">
                           """;
 
     /** Sidebar group item with: 1. text. */
     private static String sidebarGroup = """
-            <div class="gd-sidebar-menu-group">%s</div>
+            <div class="gscg-sidebar-menu-group">%s</div>
                           """;
 
     /** Sidebar item with: 1. active/blank, 2. true/false, 3. onclick menu, 4. fa-icon, 5. text. */
     private static String sidebarItem = """
-            <a href="#" class="gd-sidebar-menu-item %s" aria-current="%s"
+            <a href="#" class="gscg-sidebar-menu-item %s" aria-current="%s"
                 onclick="clickMenu('%s')">
               <i class="fas %s fa-fw"></i><span>%s</span>
             </a>
@@ -62,7 +62,7 @@ public class Sidebar
         if (Menus.showMenu(data, menuChoice))
         {
             if (data.getMenuChoice().equals(menuChoice))
-                s.append(sidebarItem.formatted("gd-active", "true", "menu-" + menuChoice, faIcon, menuText));
+                s.append(sidebarItem.formatted("gscg-active", "true", "menu-" + menuChoice, faIcon, menuText));
             else
                 s.append(sidebarItem.formatted("", "false", "menu-" + menuChoice, faIcon, menuText));
         }

@@ -15,15 +15,15 @@ public class AdminTable
 {
     /** No args for now. */
     private static final String tableHeaderTop = """
-            <div class="gd-table-container">
-              <table class="gd-table">
+            <div class="gscg-table-container">
+              <table class="gscg-table">
                 <thead>
                   <tr>
                   """;
 
     /** 1 = icon. */
     private static final String tableheaderIcon = """
-                    <th class="gd-col-icon" scope="col"><i class="fas %s fa-fw"></i></th>
+                    <th class="gscg-col-icon" scope="col"><i class="fas %s fa-fw"></i></th>
             """;
 
     /** 1 = name of column, 2 = name of clickMenu for a-z, 3=arrow to use for a-z. */
@@ -38,7 +38,7 @@ public class AdminTable
 
     /** No args. */
     private static final String tableHeaderSpacing = """
-                    <th class="gd-col-icon" scope="col">&nbsp;</th>
+                    <th class="gscg-col-icon" scope="col">&nbsp;</th>
             """;
 
     /** No args for now. */
@@ -56,7 +56,7 @@ public class AdminTable
 
     /** 1 = function, 2 = record nr, 3 = icon */
     private static final String tableRowIcon = """
-                    <td class="gd-col-icon" scope="col">
+                    <td class="gscg-col-icon" scope="col">
                       <a href="#" onclick="clickRecordId('%s', %d)">
                         <i class="fas %s fa-fw"></i>
                       </a>
@@ -65,7 +65,7 @@ public class AdminTable
 
     /** No args. */
     private static final String tableRowSpacing = """
-                    <td class="gd-col-icon" scope="col">&nbsp;</td>
+                    <td class="gscg-col-icon" scope="col">&nbsp;</td>
             """;
 
     /** 1 = cell content. */

@@ -3,7 +3,7 @@ package org.gscg.admin;
 public class ModalWindowUtils
 {
 
-    public static void popup(AdminData data, String title, String message, String okMethod)
+    public static void popup(final AdminData data, final String title, final String message, final String okMethod)
     {
         // make popup
         // System.err.println("popup with title [" + title + "] and message: " + message);
@@ -15,13 +15,13 @@ public class ModalWindowUtils
         data.setShowModalWindow(true);
     }
 
-    public static String makeModalWindow(String title, String content, String onClickClose)
+    public static String makeModalWindow(final String title, final String content, final String onClickClose)
     {
         StringBuilder s = new StringBuilder();
-        s.append("    <div class=\"gd-modal\">\n");
-        s.append("      <div class=\"gd-modal-window\" id=\"gd-modal-window\">\n");
-        s.append("        <div class=\"gd-modal-window-header\">");
-        s.append("          <span class=\"gd-modal-close\" onclick=\"");
+        s.append("    <div class=\"gscg-modal\">\n");
+        s.append("      <div class=\"gscg-modal-window\" id=\"gscg-modal-window\">\n");
+        s.append("        <div class=\"gscg-modal-window-header\">");
+        s.append("          <span class=\"gscg-modal-close\" onclick=\"");
         s.append(onClickClose);
         s.append("\">");
         s.append("&times;</span>\n");
@@ -33,69 +33,69 @@ public class ModalWindowUtils
         s.append("      </div>\n");
         s.append("    </div>\n");
         s.append("    <script>");
-        s.append("      dragElement(document.getElementById(\"gd-modal-window\"));");
+        s.append("      dragElement(document.getElementById(\"gscg-modal-window\"));");
         s.append("    </script>");
         return s.toString();
     }
 
-    public static String makeOkModalWindow(String title, String htmlText, String okMethod)
+    public static String makeOkModalWindow(final String title, final String htmlText, final String okMethod)
     {
         StringBuilder s = new StringBuilder();
-        s.append("        <div class=\"gd-modal-body\">");
-        s.append("          <div class=\"gd-modal-text\">\n");
+        s.append("        <div class=\"gscg-modal-body\">");
+        s.append("          <div class=\"gscg-modal-text\">\n");
         s.append("            <p>\n");
         s.append(htmlText);
         s.append("            </p>\n");
-        s.append("          <div class=\"gd-modal-button-row\">\n");
-        s.append("            <div class=\"gd-button-small\" onclick=\"" + okMethod + "\">OK</div>\n");
+        s.append("          <div class=\"gscg-modal-button-row\">\n");
+        s.append("            <div class=\"gscg-button-small\" onclick=\"" + okMethod + "\">OK</div>\n");
         s.append("          </div>\n");
         s.append("        </div>\n");
         return makeModalWindow(title, s.toString(), okMethod);
     }
 
-    public static String makeOkModalWindow(String title, String htmlText)
+    public static String makeOkModalWindow(final String title, final String htmlText)
     {
         return makeOkModalWindow(title, htmlText, "clickModalWindowOk()");
     }
 
-    public static void make2ButtonModalWindow(AdminData data, String title, String content, String buttonText1,
-            String buttonMethod1, String buttonText2, String buttonMethod2, String closeMethod)
+    public static void make2ButtonModalWindow(final AdminData data, final String title, final String content, final String buttonText1,
+            final String buttonMethod1, final String buttonText2, final String buttonMethod2, final String closeMethod)
     {
         StringBuilder s = new StringBuilder();
-        s.append("    <div class=\"gd-modal\">\n");
-        s.append("      <div class=\"gd-modal-window\" id=\"gd-modal-window\">\n");
-        s.append("        <div class=\"gd-modal-window-header\">");
-        s.append("          <span class=\"gd-modal-close\" onclick=\"");
+        s.append("    <div class=\"gscg-modal\">\n");
+        s.append("      <div class=\"gscg-modal-window\" id=\"gscg-modal-window\">\n");
+        s.append("        <div class=\"gscg-modal-window-header\">");
+        s.append("          <span class=\"gscg-modal-close\" onclick=\"");
         s.append(closeMethod);
         s.append("\">");
         s.append("&times;</span>\n");
         s.append("          <p>");
         s.append(title);
         s.append("</p>\n");
-        s.append("        </div>\n"); // gd-modal-window-header
-        s.append("        <div class=\"gd-modal-body\">");
-        s.append("          <div class=\"gd-modal-text\">\n");
+        s.append("        </div>\n"); // gscg-modal-window-header
+        s.append("        <div class=\"gscg-modal-body\">");
+        s.append("          <div class=\"gscg-modal-text\">\n");
         s.append("            <p>\n");
         s.append(content);
         s.append("            </p>\n");
-        s.append("          </div>\n"); // gd-modal-text
-        s.append("          <div class=\"gd-modal-button-row\">\n");
-        s.append("            <div class=\"gd-button-small\" onclick=\"");
+        s.append("          </div>\n"); // gscg-modal-text
+        s.append("          <div class=\"gscg-modal-button-row\">\n");
+        s.append("            <div class=\"gscg-button-small\" onclick=\"");
         s.append(buttonMethod1);
         s.append("\">");
         s.append(buttonText1);
         s.append("</div>\n");
-        s.append("            <div class=\"gd-button-small\" onclick=\"");
+        s.append("            <div class=\"gscg-button-small\" onclick=\"");
         s.append(buttonMethod2);
         s.append("\">");
         s.append(buttonText2);
         s.append("</div>\n");
-        s.append("          </div>\n"); // gd-modal-button-row
-        s.append("        </div>\n"); // gd-gd-modal-body
-        s.append("      </div>\n"); // gd-modal-window
-        s.append("    </div>\n"); // gd-modal
+        s.append("          </div>\n"); // gscg-modal-button-row
+        s.append("        </div>\n"); // gscg-gscg-modal-body
+        s.append("      </div>\n"); // gscg-modal-window
+        s.append("    </div>\n"); // gscg-modal
         s.append("    <script>");
-        s.append("      dragElement(document.getElementById(\"gd-modal-window\"));");
+        s.append("      dragElement(document.getElementById(\"gscg-modal-window\"));");
         s.append("    </script>");
 
         data.setModalWindowHtml(s.toString());
